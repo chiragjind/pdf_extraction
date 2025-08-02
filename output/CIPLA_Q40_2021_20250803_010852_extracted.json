@@ -1,0 +1,21 @@
+{
+  "company": "CIPLA",
+  "report_date": "January 12, 2021",
+  "filename": "CIPLA_transcript_Jan_2021.pdf",
+  "quarter": "Q40",
+  "fiscal_year": "2021",
+  "management_team": [
+    "Management information not found"
+  ],
+  "moderator": "Moderator information not found",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {},
+  "business_highlights": [],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:52.283643",
+    "source_file": "data\\cipla\\CIPLA_transcript_Jan_2021.pdf",
+    "text_length": 25809,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

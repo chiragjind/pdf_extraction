@@ -1,0 +1,73 @@
+{
+  "company": "LUPIN",
+  "report_date": "November 12, 2019",
+  "filename": "LUPIN_transcript_Nov_2019.pdf",
+  "quarter": "Q3",
+  "fiscal_year": "2019",
+  "management_team": [
+    "MS. VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN",
+    "MR. RAJIV PILLAI - SR VICE PRESIDENT, CORPORATE",
+    "VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN",
+    "RAJIV PILLAI - SR VICE PRESIDENT, CORPORATE"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to the Lupin Limited Business Update Kyowa \nDivestiture Conference Call",
+  "analysts": [
+    {
+      "name": "Chirag Talati",
+      "firm": "Kotak Securities"
+    },
+    {
+      "name": "Aditya Khemka",
+      "firm": "DSP Mutual Fund"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "Phillip Capital"
+    },
+    {
+      "name": "Prakash Agarwal",
+      "firm": "Axis Securities"
+    },
+    {
+      "name": "Chirag Dagli",
+      "firm": "HDFC Mutual Fund"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    },
+    {
+      "name": "Shyam Srinivasan",
+      "firm": "Goldman Sachs"
+    },
+    {
+      "name": "Rahul Sharma",
+      "firm": "Karvy Stock Broking"
+    },
+    {
+      "name": "Surjit Pal",
+      "firm": "Prabhudas Lilladher"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "IDFC Securities"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {},
+  "business_highlights": [
+    "partnership with Yoshindo, that \nyielded really good results and probably needs more investment."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:59.290426",
+    "source_file": "data\\lupin\\LUPIN_transcript_Nov_2019.pdf",
+    "text_length": 31540,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

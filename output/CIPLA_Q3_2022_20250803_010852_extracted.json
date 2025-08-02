@@ -1,0 +1,71 @@
+{
+  "company": "CIPLA",
+  "report_date": "January 25, 2022",
+  "filename": "CIPLA_transcript_Jan_2022.pdf",
+  "quarter": "Q3",
+  "fiscal_year": "2022",
+  "management_team": [
+    "MR. UMANG VOHRA - MANAGING DIRECTOR AND",
+    "MR. KEDAR UPADHYE - GLOBAL CFO, CIPLA LTD.",
+    "MR. NAVEEN BANSAL - HEAD, INVESTOR RELATIONS,",
+    "UMANG VOHRA - MANAGING DIRECTOR AND",
+    "KEDAR UPADHYE - GLOBAL CFO, CIPLA LTD.",
+    "NAVEEN BANSAL - HEAD, INVESTOR RELATIONS,"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to the Cipla Ltd",
+  "analysts": [
+    {
+      "name": "Nikhil",
+      "firm": "SIMPL"
+    },
+    {
+      "name": "Damayanti Kerai",
+      "firm": "HSBC Securities and \nCapital Markets"
+    },
+    {
+      "name": "Prakash",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Bharat Sheth",
+      "firm": "Quest Investment Advisors"
+    },
+    {
+      "name": "Anubhav Aggarwal",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "Phillip Capital"
+    },
+    {
+      "name": "Nithya Balasubramanian",
+      "firm": "Bernstein \nResearch"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal Oswal \nFinancial Services"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "6",
+    "ebitda_margin_percentage": "22.7",
+    "ebitda_inr_crores": "1243"
+  },
+  "business_highlights": [
+    "launched 10 brands across cardiac and the diabetic range this year.",
+    "launched the product in market and \nhow many such peptide product you have in your pipeline? \nUmang Vohra: \nI can't give you the specific numbers.",
+    "partnerships with global multinational corporations."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:52.446410",
+    "source_file": "data\\cipla\\CIPLA_transcript_Jan_2022.pdf",
+    "text_length": 59059,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

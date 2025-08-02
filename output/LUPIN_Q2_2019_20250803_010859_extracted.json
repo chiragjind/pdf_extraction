@@ -1,0 +1,99 @@
+{
+  "company": "LUPIN",
+  "report_date": "October 31, 2018",
+  "filename": "LUPIN_transcript_Nov_2018.pdf",
+  "quarter": "Q2",
+  "fiscal_year": "2019",
+  "management_team": [
+    "DR. KAMAL SHARMA - ADVISOR & VICE CHAIRMAN,",
+    "MS. VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN",
+    "MR. RAMESH SWAMINATHAN - CHIEF FINANCIAL",
+    "MR. ALOK SONIG - CEO, US GENERICS, LUPIN",
+    "MR. SUNIL MAKHARIA - PRESIDENT (FINANCE), LUPIN",
+    "MR. RAJEEV SIBAL - HEAD (INDIA REGION",
+    "MR. NARESH GUPTA - PRESIDENT",
+    "MR. RAJIV PILLAI - VICE PRESIDENT (CORPORATE",
+    "KAMAL SHARMA - ADVISOR & VICE CHAIRMAN,",
+    "VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN",
+    "RAMESH SWAMINATHAN - CHIEF FINANCIAL",
+    "ALOK SONIG - CEO, US GENERICS, LUPIN",
+    "SUNIL MAKHARIA - PRESIDENT (FINANCE), LUPIN",
+    "RAJEEV SIBAL - HEAD (INDIA REGION",
+    "NARESH GUPTA - PRESIDENT",
+    "RAJIV PILLAI - VICE PRESIDENT (CORPORATE"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to the Lupin Limited Q2 FY19 Earnings \nConference Call",
+  "analysts": [
+    {
+      "name": "Prakash Agarwal",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Anubhav Agarwal",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "Phillip Capital"
+    },
+    {
+      "name": "Girish Bakhru",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Chirag Dagli",
+      "firm": "HDFC"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan \nStanley"
+    },
+    {
+      "name": "Saion Mukherjee",
+      "firm": "Nomura"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "IDFC Securities"
+    },
+    {
+      "name": "Krishnan Dusaha",
+      "firm": "Quan tum Mutual Fund"
+    },
+    {
+      "name": "Shyam Srinivasan",
+      "firm": "Goldman Sachs"
+    },
+    {
+      "name": "Chirag Talati",
+      "firm": "Kotak Securities"
+    },
+    {
+      "name": "Rahul Sharma",
+      "firm": "Karvy Stock"
+    },
+    {
+      "name": "Surajit Pal",
+      "firm": "Prabhudas Lilladher"
+    },
+    {
+      "name": "Srikant Krishnaprasad",
+      "firm": "Franklin Templeton"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {},
+  "business_highlights": [],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:59.180340",
+    "source_file": "data\\lupin\\LUPIN_transcript_Nov_2018.pdf",
+    "text_length": 53141,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

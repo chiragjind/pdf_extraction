@@ -1,0 +1,79 @@
+{
+  "company": "CIPLA",
+  "report_date": "July 26, 2024",
+  "filename": "CIPLA_transcript_Jul_2024.pdf",
+  "quarter": "Q1",
+  "fiscal_year": "2025",
+  "management_team": [
+    "MR. UMANG VOHRA - MANAGING DIRECTOR AND",
+    "MR. ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "MS. DIKSHA MAHESHWARI - INVESTOR RELATIONS",
+    "UMANG VOHRA - MANAGING DIRECTOR AND",
+    "EXECUTIVE OFFICER - CIPLA",
+    "ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "DIKSHA MAHESHWARI - INVESTOR RELATIONS"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to Cipla Limited Q1 FY '25 Earnings Conference \nCall",
+  "analysts": [
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal Oswal \nFinancial Service"
+    },
+    {
+      "name": "Kunal Dhamesha",
+      "firm": "Macquarie Capital"
+    },
+    {
+      "name": "Damayanti Kerai",
+      "firm": "HSBC"
+    },
+    {
+      "name": "Surya Narayan Patra",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Aman Goel",
+      "firm": "Axis Securities"
+    },
+    {
+      "name": "Bino Pathiparampil",
+      "firm": "Elara Capital"
+    },
+    {
+      "name": "Aman Vij",
+      "firm": "Investment Management"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "DAM Capital"
+    },
+    {
+      "name": "Saha",
+      "firm": "Quantum Mutual Fund"
+    },
+    {
+      "name": "Sumit Gupta",
+      "firm": "Centrum"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_inr_crores": "6694",
+    "revenue_usd_million": "250",
+    "growth_percentage": "11",
+    "ebitda_margin_percentage": "24.5"
+  },
+  "business_highlights": [
+    "acquired, I suppose -- has \nthe acquisition gone through? And do we in the business? What is the run rate? Any thoughts on \n-- any number you are trying? \nUmang Vohra: \nSorry, on what product? \nKrishnendu Saha: \nThe you acquired a cosmetic and personal care business, business, I suppose."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:52.850633",
+    "source_file": "data\\cipla\\CIPLA_transcript_Jul_2024.pdf",
+    "text_length": 44189,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

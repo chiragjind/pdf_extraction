@@ -1,0 +1,36 @@
+{
+  "company": "LUPIN",
+  "report_date": "May 21, 2025",
+  "filename": "LUPIN_transcript_May_2025.pdf",
+  "quarter": "Q12",
+  "fiscal_year": "2025",
+  "management_team": [
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "MR. RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO & HEAD OF API",
+    "MR. RAVI AGRAWAL - M&A AND INVESTOR RELATIONS, LUPIN LIMITED",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO & HEAD OF API",
+    "RAVI AGRAWAL - M&A AND INVESTOR RELATIONS, LUPIN LIMITED"
+  ],
+  "moderator": "Moderator information not found",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "13"
+  },
+  "business_highlights": [
+    "approved by the FDA, but have multiple manufacturing \nsites that are approved by the FDA, as well as other regulators that enable us \nto build our generic business.",
+    "acquired the insulin brand from Lilly, \nwhich enables us to really gain the end-to-end economics on the product.",
+    "acquired with very limited promotion efforts, \nso we are looking at how we can build further on this start.",
+    "acquired Medisol, which gave us a very nice injectables portfolio that enables \nus to build our internal pipeline on top of this to build a business in France.",
+    "acquired a few, but not of scale."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:58.944160",
+    "source_file": "data\\lupin\\LUPIN_transcript_May_2025.pdf",
+    "text_length": 101164,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

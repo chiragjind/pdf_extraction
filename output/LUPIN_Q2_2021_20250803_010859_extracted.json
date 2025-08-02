@@ -1,0 +1,35 @@
+{
+  "company": "LUPIN",
+  "report_date": "November 24, 2020",
+  "filename": "LUPIN_transcript_Nov_2020.pdf",
+  "quarter": "Q2",
+  "fiscal_year": "2021",
+  "management_team": [
+    "DR. KAMAL SHARMA - VICE CHAIRMAN, LUPIN LIMITED",
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR,    LUPIN LIMITED",
+    "MR. VISHAL RATHI - VICE PRESIDENT, CORPORATE FINANCE",
+    "MR. ARVIND BOTHRA - HEAD, INVESTOR RELATIONS AND",
+    "KAMAL SHARMA - VICE CHAIRMAN, LUPIN LIMITED",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR,    LUPIN LIMITED",
+    "RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO",
+    "VISHAL RATHI - VICE PRESIDENT, CORPORATE FINANCE",
+    "ARVIND BOTHRA - HEAD, INVESTOR RELATIONS AND"
+  ],
+  "moderator": "Hello, welcome to Lupin Q2 FY21 earnings call",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "9"
+  },
+  "business_highlights": [
+    "launched in the next fiscal year. And then our iron products will \nfollow that and then both the Nanomi Depot products paliperidone and Risperidone \nas well as the liposomal products doxorubicin and Ambisome will be in."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:59.393945",
+    "source_file": "data\\lupin\\LUPIN_transcript_Nov_2020.pdf",
+    "text_length": 46622,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

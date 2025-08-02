@@ -1,0 +1,76 @@
+{
+  "company": "CIPLA",
+  "report_date": "October 26, 2021",
+  "filename": "CIPLA_transcript_Oct_2021.pdf",
+  "quarter": "Q2",
+  "fiscal_year": "2022",
+  "management_team": [
+    "MR. UMANG VOHRA - MANAGING DIRECTOR &",
+    "MR. KEDAR UPADHYE - GLOBAL CHIEF FINANCIAL",
+    "MR. NAVEEN BANSAL - HEAD, INVESTOR RELATIONS,",
+    "UMANG VOHRA - MANAGING DIRECTOR &",
+    "KEDAR UPADHYE - GLOBAL CHIEF FINANCIAL",
+    "NAVEEN BANSAL - HEAD, INVESTOR RELATIONS,"
+  ],
+  "moderator": "MR",
+  "analysts": [
+    {
+      "name": "Prakash",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal Oswal \nFinancial Services"
+    },
+    {
+      "name": "Foram Parekh",
+      "firm": "Choice Institutional \nBroking"
+    },
+    {
+      "name": "Anubhav Agarwal",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Kunal Damesha",
+      "firm": "Emkay Global"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "Philip Capital"
+    },
+    {
+      "name": "Nitya Balasubramayam",
+      "firm": "Bernstein \nResearch"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "DAM Capital"
+    },
+    {
+      "name": "Charulata Gaidhani",
+      "firm": "Dalal & Broacha"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "sales_inr_crores": "1279",
+    "growth_percentage": "22",
+    "increase_percentage": "3",
+    "ebitda_margin_percentage": "22",
+    "ebitda_inr_crores": "1226"
+  },
+  "business_highlights": [
+    "partnerships with several MNC organizations \nfor the strategic widening of our therapy base with specialty offerings across cardiology, anti-\ndiabetic, oncology franchise.",
+    "partnership with Eli Lily for \nthe diabetes franchise."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:55.584304",
+    "source_file": "data\\cipla\\CIPLA_transcript_Oct_2021.pdf",
+    "text_length": 52770,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

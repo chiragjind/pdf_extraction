@@ -1,0 +1,33 @@
+{
+  "company": "LUPIN",
+  "report_date": "November 17, 2023",
+  "filename": "LUPIN_transcript_Nov_2023.pdf",
+  "quarter": "Q2",
+  "fiscal_year": "2024",
+  "management_team": [
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "MR. RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD",
+    "MR. RAVI AGRAWAL - M&A AND INVESTOR RELATIONS",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD",
+    "RAVI AGRAWAL - M&A AND INVESTOR RELATIONS"
+  ],
+  "moderator": "Hello",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_usd_million": "211",
+    "sales_inr_crores": "4939",
+    "growth_percentage": "20.7",
+    "ebitda_inr_crores": "923"
+  },
+  "business_highlights": [],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:59.781251",
+    "source_file": "data\\lupin\\LUPIN_transcript_Nov_2023.pdf",
+    "text_length": 41194,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

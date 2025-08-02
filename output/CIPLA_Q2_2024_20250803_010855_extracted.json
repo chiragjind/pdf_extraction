@@ -1,0 +1,82 @@
+{
+  "company": "CIPLA",
+  "report_date": "October 27, 2023",
+  "filename": "CIPLA_transcript_Oct_2023.pdf",
+  "quarter": "Q2",
+  "fiscal_year": "2024",
+  "management_team": [
+    "MR. UMANG VOHRA - CIPLA LIMITED",
+    "MR. ASHISH ADUKIA - CIPLA LIMITED",
+    "MR. AJINKYA PANDHARKAR - HEAD (INVESTOR",
+    "UMANG VOHRA - CIPLA LIMITED",
+    "ASHISH ADUKIA - CIPLA LIMITED",
+    "AJINKYA PANDHARKAR - HEAD (INVESTOR"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to Cipla Limited Conference call",
+  "analysts": [
+    {
+      "name": "Saion \nMukherjee",
+      "firm": "Nomura Securities"
+    },
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal Oswal Financial Services"
+    },
+    {
+      "name": "Aman Vij",
+      "firm": "Astute Investment Management"
+    },
+    {
+      "name": "Kunal Dhamesha",
+      "firm": "Macquerie"
+    },
+    {
+      "name": "Damayanti Kerai",
+      "firm": "HSBC"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "DAM Capital"
+    },
+    {
+      "name": "Krishnendu Saha",
+      "firm": "Quantum AMC"
+    },
+    {
+      "name": "Vishal Manchanda",
+      "firm": "Systematics"
+    },
+    {
+      "name": "Ankush Mahajan",
+      "firm": "Axis Securities"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_inr_crores": "6678",
+    "revenue_usd_million": "229",
+    "sales_inr_crores": "6490",
+    "growth_percentage": "15",
+    "increase_percentage": "200",
+    "ebitda_margin_percentage": "26"
+  },
+  "business_highlights": [
+    "partnerships with our associate company GoApptiv and deepening our \ndistribution network.",
+    "acquired, we had one of the products there we have impaired the intangibles \nthat was created when we acquired that product from the partner.",
+    "acquired, which comes with a portfolio, there is a huge synergy that sits out there \nto actually leverage our distribution network to push those products in."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:55.748805",
+    "source_file": "data\\cipla\\CIPLA_transcript_Oct_2023.pdf",
+    "text_length": 48899,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

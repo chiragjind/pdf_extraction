@@ -1,0 +1,111 @@
+{
+  "company": "LUPIN",
+  "report_date": "February 13, 2019",
+  "filename": "LUPIN_transcript_Feb_2019.pdf",
+  "quarter": "Q3",
+  "fiscal_year": "2019",
+  "management_team": [
+    "MS. VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "MR. NARESH GUPTA - PRESIDENT",
+    "MR. SUNIL MAKHARIA - PRESIDENT (FINANCE), LUPIN",
+    "MR. RAJIV PILLAI - SR. VICE PRESIDENT",
+    "MR. ARVIND BOTHRA - HEAD (INVESTOR",
+    "VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "NARESH GUPTA - PRESIDENT",
+    "SUNIL MAKHARIA - PRESIDENT (FINANCE), LUPIN",
+    "RAJIV PILLAI - SR. VICE PRESIDENT",
+    "ARVIND BOTHRA - HEAD (INVESTOR"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to the Lupin Limited Q3 FY'19 Earnings \nConference Call",
+  "analysts": [
+    {
+      "name": "Saion Mukherjee",
+      "firm": "Nomura"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal Oswal \nSecurities"
+    },
+    {
+      "name": "Anubhav",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "IDFC Securities"
+    },
+    {
+      "name": "Mehul Sheth",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Anmol Ganjoo",
+      "firm": "JM Financial"
+    },
+    {
+      "name": "Srijan Sinha",
+      "firm": "Future Generali"
+    },
+    {
+      "name": "Ashish Thavkar",
+      "firm": "Motilal Oswal"
+    },
+    {
+      "name": "Shyam Srinivasan",
+      "firm": "Goldman Sachs"
+    },
+    {
+      "name": "Arpit Kapoor",
+      "firm": "IDFC Mutual Fund"
+    },
+    {
+      "name": "Saket Bansal",
+      "firm": "Stock Axis"
+    },
+    {
+      "name": "Ranjit Kapadia",
+      "firm": "Centrum Broking"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    },
+    {
+      "name": "Nimish Mehta",
+      "firm": "Research Delta Advisors"
+    },
+    {
+      "name": "Damyanti Kerai",
+      "firm": "HSBC"
+    },
+    {
+      "name": "Ankur Shah",
+      "firm": "Quasar Capital"
+    },
+    {
+      "name": "Dheeresh Pathak",
+      "firm": "Goldman Sachs Asset \nManagement"
+    },
+    {
+      "name": "Anubhav Aggarwal",
+      "firm": "Credit Suisse"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "12"
+  },
+  "business_highlights": [
+    "launched an AG to Methergine but others like Metformin products for Glumetza \nhave stabilized."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:57.001584",
+    "source_file": "data\\lupin\\LUPIN_transcript_Feb_2019.pdf",
+    "text_length": 50713,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

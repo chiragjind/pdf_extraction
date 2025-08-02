@@ -1,0 +1,28 @@
+{
+  "company": "LUPIN",
+  "report_date": "November 16, 2022",
+  "filename": "LUPIN_transcript_Nov_2022.pdf",
+  "quarter": "Q2",
+  "fiscal_year": "2023",
+  "management_team": [
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "MR. RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL"
+  ],
+  "moderator": "Welcome to Lupin Limited Q2 FY23 Earnings Conference Call",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {},
+  "business_highlights": [
+    "acquired \nin the current quarter."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:59.664079",
+    "source_file": "data\\lupin\\LUPIN_transcript_Nov_2022.pdf",
+    "text_length": 61946,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

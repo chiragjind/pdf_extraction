@@ -1,0 +1,29 @@
+# PDF Extraction System - Production Dependencies
+
+# Core PDF processing
+PyMuPDF==1.23.14
+
+# Alternative PDF processing (backup)
+pdfplumber==0.10.3
+
+# Text processing and regex
+regex==2023.12.25
+
+# JSON handling and data validation
+jsonschema==4.21.1
+
+# Date parsing
+python-dateutil==2.8.2
+
+# Progress bars for processing multiple files
+tqdm==4.66.1
+
+# Logging and configuration
+colorlog==6.8.2
+
+# File path handling
+pathlib2==2.3.7.post1
+
+# Optional: For advanced text processing
+# nltk==3.8.1
+# spacy==3.7.2

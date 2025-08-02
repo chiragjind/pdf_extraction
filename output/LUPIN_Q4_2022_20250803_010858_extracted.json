@@ -1,0 +1,34 @@
+{
+  "company": "LUPIN",
+  "report_date": "May 25, 2022",
+  "filename": "LUPIN_transcript_May_2022.pdf",
+  "quarter": "Q4",
+  "fiscal_year": "2022",
+  "management_team": [
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "MR. RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD"
+  ],
+  "moderator": "Thank you",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "ebitda_margin_percentage": "7.3"
+  },
+  "business_highlights": [
+    "launched a couple of products.",
+    "launched two products, small, though in the \nscheme of things.",
+    "partnership with Mylan.",
+    "acquired recently \nAnglo-French because that's the way forward for a host of products in the years to come as \nwell.",
+    "acquired Anglo-French."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:58.489545",
+    "source_file": "data\\lupin\\LUPIN_transcript_May_2022.pdf",
+    "text_length": 74287,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

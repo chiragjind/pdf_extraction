@@ -1,0 +1,35 @@
+{
+  "company": "CIPLA",
+  "report_date": "July 26, 2023",
+  "filename": "CIPLA_transcript_Jul_2023.pdf",
+  "quarter": "Q1",
+  "fiscal_year": "2024",
+  "management_team": [
+    "MR. UMANG VOHRA - MANAGING DIRECTOR AND",
+    "MR. ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "MR. AJINKYA PANDHARKAR - HEAD, INVESTOR",
+    "UMANG VOHRA - MANAGING DIRECTOR AND",
+    "EXECUTIVE OFFICER - CIPLA",
+    "ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "AJINKYA PANDHARKAR - HEAD, INVESTOR"
+  ],
+  "moderator": "Ladies and gentlemen, good day, and welcome to Cipla Limited Q1 FY' ‘24 Earnings \nConference Call",
+  "analysts": [
+    {
+      "name": "Damayanti Kerai",
+      "firm": "HSBC"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "23.6",
+    "ebitda_margin_percentage": "23.6"
+  },
+  "business_highlights": [],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:52.736700",
+    "source_file": "data\\cipla\\CIPLA_transcript_Jul_2023.pdf",
+    "text_length": 55706,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

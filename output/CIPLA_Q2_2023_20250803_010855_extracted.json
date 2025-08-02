@@ -1,0 +1,76 @@
+{
+  "company": "CIPLA",
+  "report_date": "November 4, 2022",
+  "filename": "CIPLA_transcript_Nov_2022.pdf",
+  "quarter": "Q2",
+  "fiscal_year": "2023",
+  "management_team": [
+    "MR. UMANG VOHRA - MANAGING DIRECTOR &",
+    "MR. ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "MR. NAVEEN BANSAL - HEAD, INVESTOR RELATIONS,",
+    "UMANG VOHRA - MANAGING DIRECTOR &",
+    "ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "NAVEEN BANSAL - HEAD, INVESTOR RELATIONS,"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to the Q2 FY'23 Earnings Conference Call of \nCipla Limited",
+  "analysts": [
+    {
+      "name": "Tushar \nManudhane",
+      "firm": "Motilal Oswal Financial Services"
+    },
+    {
+      "name": "Prakash Agarwal",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Kunal Dhamesha",
+      "firm": "Macquarie"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Damayanti Kerai",
+      "firm": "HSBC"
+    },
+    {
+      "name": "Nithya Balasubramaniam",
+      "firm": "Bernstein"
+    },
+    {
+      "name": "Vivek",
+      "firm": "Citi"
+    },
+    {
+      "name": "Ritesh Rathod",
+      "firm": "Nippon India"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "DAM Capital"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_inr_crores": "5829",
+    "growth_percentage": "6",
+    "increase_percentage": "7.2",
+    "ebitda_margin_percentage": "22.3",
+    "ebitda_inr_crores": "1302"
+  },
+  "business_highlights": [
+    "launched eight new brands in Cardiology, Diabetes, Urology, \nGynecology and Respiratory.",
+    "launched the product."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:55.242185",
+    "source_file": "data\\cipla\\CIPLA_transcript_Nov_2022.pdf",
+    "text_length": 50529,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

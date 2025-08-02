@@ -1,0 +1,85 @@
+{
+  "company": "LUPIN",
+  "report_date": "February 14, 2020",
+  "filename": "LUPIN_transcript_Feb_2020.pdf",
+  "quarter": "Q3",
+  "fiscal_year": "2020",
+  "management_team": [
+    "DR. KAMAL SHARMA - VICE CHAIRMAN, LUPIN",
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN",
+    "MR. RAJIV PILLAI - SR VICE PRESIDENT, CORPORATE",
+    "MR. ARVIND BOTHRA - HEAD, INVESTOR RELATIONS",
+    "KAMAL SHARMA - VICE CHAIRMAN, LUPIN",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN",
+    "RAJIV PILLAI - SR VICE PRESIDENT, CORPORATE",
+    "ARVIND BOTHRA - HEAD, INVESTOR RELATIONS"
+  ],
+  "moderator": "Ladies and gentlemen, good day, and welcome to the Lupin Limited Q3 FY'20 Earnings \nConference Call",
+  "analysts": [
+    {
+      "name": "Surya Patra",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Prakash Agarwal",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Kunal Dhamesha",
+      "firm": "SBI Capital Markets"
+    },
+    {
+      "name": "Chirag Dagli",
+      "firm": "HDFC Mutual Fund"
+    },
+    {
+      "name": "Anubhav Agarwal",
+      "firm": "Crédit Suisse"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "IDFC Securities"
+    },
+    {
+      "name": "Aditya Khemka",
+      "firm": "DSP Blackrock"
+    },
+    {
+      "name": "Anmol Ganjoo",
+      "firm": "JM Financial"
+    },
+    {
+      "name": "Prashant Nair",
+      "firm": "Citigroup"
+    },
+    {
+      "name": "Dheeresh Pathak",
+      "firm": "Goldman Sachs"
+    },
+    {
+      "name": "Krishnendu Saha",
+      "firm": "Quantum Mutual \nFund"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "sales_inr_crores": "3716",
+    "growth_percentage": "8",
+    "ebitda_margin_percentage": "14.1"
+  },
+  "business_highlights": [
+    "launched, the KCl products that we have recently launched."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:57.134404",
+    "source_file": "data\\lupin\\LUPIN_transcript_Feb_2020.pdf",
+    "text_length": 57322,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

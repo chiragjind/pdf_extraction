@@ -1,0 +1,76 @@
+{
+  "company": "CIPLA",
+  "report_date": "May 22, 2019",
+  "filename": "CIPLA_transcript_May_2019.pdf",
+  "quarter": "Q4",
+  "fiscal_year": "2019",
+  "management_team": [
+    "MR. UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "MR. KEDAR UPADHYE - GLOBAL CFO, CIPLA LIMITED",
+    "MR. NAVEEN BANSAL - INVESTOR RELATIONS TEAM,",
+    "UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "KEDAR UPADHYE - GLOBAL CFO, CIPLA LIMITED",
+    "NAVEEN BANSAL - INVESTOR RELATIONS TEAM,"
+  ],
+  "moderator": "MR",
+  "analysts": [
+    {
+      "name": "Anubhav Aggarwal",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "IDFC Securities"
+    },
+    {
+      "name": "Shyam Srinivasan",
+      "firm": "Goldman Sachs"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "Phillip Capital"
+    },
+    {
+      "name": "Chirag Dagli",
+      "firm": "HDFC Mutual Fund"
+    },
+    {
+      "name": "Nimish Mehta",
+      "firm": "Research Delta Advisors"
+    },
+    {
+      "name": "Damayanti Kerai",
+      "firm": "HSBC"
+    },
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal Oswal \nSecurities"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_inr_crores": "16362",
+    "growth_percentage": "19",
+    "increase_percentage": "8",
+    "ebitda_inr_crores": "972"
+  },
+  "business_highlights": [
+    "partnership with LG \nLife Sciences and in-licensed their entire portfolio of marketed products in India.",
+    "partnership with Wellthy \nTherapeutics in India.",
+    "acquired 30% stake to provide connected health solutions to the patients.",
+    "acquired, will further strengthen our position in the fast-growing OTC market in South Africa.",
+    "acquired a 30% stake in Brandmed, a connected health solutions \ncompany.",
+    "acquired intangibles in U.",
+    "acquired that 150 million \nRAND in FY18, so if you could highlight on how it has performed in FY19? And how do we \nsee it going forward being a very high margin and good growth profile? \nKedar Upadhye: \nIt has been few months of integration."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:53.379839",
+    "source_file": "data\\cipla\\CIPLA_transcript_May_2019.pdf",
+    "text_length": 53817,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

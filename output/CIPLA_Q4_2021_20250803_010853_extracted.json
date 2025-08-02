@@ -1,0 +1,76 @@
+{
+  "company": "CIPLA",
+  "report_date": "May 14, 2021",
+  "filename": "CIPLA_transcript_May_2021.pdf",
+  "quarter": "Q4",
+  "fiscal_year": "2021",
+  "management_team": [
+    "MR. UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "MR. KEDAR UPADHYE - GLOBAL CFO, CIPLA",
+    "MR. NAVEEN BANSAL - INVESTOR RELATIONS TEAM,",
+    "UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "KEDAR UPADHYE - GLOBAL CFO, CIPLA",
+    "NAVEEN BANSAL - INVESTOR RELATIONS TEAM,"
+  ],
+  "moderator": "MR",
+  "analysts": [
+    {
+      "name": "Prakash",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Nitya Balasubramanyam",
+      "firm": "Bernstein"
+    },
+    {
+      "name": "Niraj Khetan",
+      "firm": "VT Capital"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Nimish Mehta",
+      "firm": "Research Delta Advisors"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    },
+    {
+      "name": "Charulata Gaidhani",
+      "firm": "Dalal & Broacha"
+    },
+    {
+      "name": "Krishnendu Shah",
+      "firm": "Quantum Mutual Fund"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Arpit Kapoor",
+      "firm": "IDFC Mutual Fund"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "5",
+    "increase_percentage": "2",
+    "ebitda_margin_percentage": "22",
+    "ebitda_inr_crores": "796"
+  },
+  "business_highlights": [
+    "launched an active program to transition consumer brands to the CHL \nbusiness.",
+    "partnership with \nMSD for Molnupiravir, Roche for the anti-body cocktail and El Lilly for Baricitinib.",
+    "partnerships that we can have if people are interested to partner with us."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:53.857438",
+    "source_file": "data\\cipla\\CIPLA_transcript_May_2021.pdf",
+    "text_length": 48359,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

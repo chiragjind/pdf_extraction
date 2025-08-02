@@ -1,0 +1,33 @@
+{
+  "company": "LUPIN",
+  "report_date": "August 11, 2023",
+  "filename": "LUPIN_transcript_Aug_2023.pdf",
+  "quarter": "Q1",
+  "fiscal_year": "2024",
+  "management_team": [
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "MR. RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD"
+  ],
+  "moderator": "Hello",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "sales_inr_crores": "4742",
+    "growth_percentage": "9.5",
+    "ebitda_inr_crores": "879"
+  },
+  "business_highlights": [
+    "partnership with Caplin Point.",
+    "partnership with Ceylon and Poland, which made it a challenge for us."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:56.690311",
+    "source_file": "data\\lupin\\LUPIN_transcript_Aug_2023.pdf",
+    "text_length": 54697,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

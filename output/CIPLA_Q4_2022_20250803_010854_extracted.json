@@ -1,0 +1,76 @@
+{
+  "company": "CIPLA",
+  "report_date": "May 10, 2022",
+  "filename": "CIPLA_transcript_May_2022.pdf",
+  "quarter": "Q4",
+  "fiscal_year": "2022",
+  "management_team": [
+    "MR. UMANG VOHRA - MANAGING DIRECTOR AND",
+    "MR. DINESH JAIN - INTERIM GLOBAL CFO, CIPLA",
+    "MR. NAVEEN BANSAL - INVESTOR RELATIONS TEAM",
+    "UMANG VOHRA - MANAGING DIRECTOR AND",
+    "DINESH JAIN - INTERIM GLOBAL CFO, CIPLA",
+    "NAVEEN BANSAL - INVESTOR RELATIONS TEAM"
+  ],
+  "moderator": "Ladies and gentlemen, good day, and welcome to the Cipla Limited Quarter 4 FY22 Earnings \nConference Call",
+  "analysts": [
+    {
+      "name": "Prakash \nAgarwal",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Anubhav Aggarwal",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Saion Mukherjee",
+      "firm": "Nomura Securities"
+    },
+    {
+      "name": "Bino Pathiparampil",
+      "firm": "Incred Capital"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    },
+    {
+      "name": "Nithya Balasubramanian",
+      "firm": "Bernstein"
+    },
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal Oswal Financial Services"
+    },
+    {
+      "name": "Nikhil",
+      "firm": "SIMPL"
+    },
+    {
+      "name": "Sonal Gupta",
+      "firm": "L&T Mutual Fund"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_inr_crores": "5260",
+    "revenue_usd_million": "30",
+    "sales_inr_crores": "1471",
+    "growth_percentage": "14",
+    "increase_percentage": "2.3",
+    "ebitda_inr_crores": "763"
+  },
+  "business_highlights": [
+    "acquired \nby JB Chemicals."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:54.034268",
+    "source_file": "data\\cipla\\CIPLA_transcript_May_2022.pdf",
+    "text_length": 52671,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

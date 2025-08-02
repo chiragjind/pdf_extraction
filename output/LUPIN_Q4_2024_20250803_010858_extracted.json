@@ -1,0 +1,37 @@
+{
+  "company": "LUPIN",
+  "report_date": "May 14, 2024",
+  "filename": "LUPIN_transcript_May_2024.pdf",
+  "quarter": "Q4",
+  "fiscal_year": "2024",
+  "management_team": [
+    "MS. VINITA GUPTA - CEO, LUPIN LIMITED",
+    "MR. NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "MR. RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD",
+    "MR. RAVI AGRAWAL - M&A AND INVESTOR RELATIONS",
+    "VINITA GUPTA - CEO, LUPIN LIMITED",
+    "NILESH GUPTA - MANAGING DIRECTOR, LUPIN LIMITED",
+    "RAMESH SWAMINATHAN - EXECUTIVE DIRECTOR, GLOBAL CFO AND HEAD",
+    "RAVI AGRAWAL - M&A AND INVESTOR RELATIONS"
+  ],
+  "moderator": "Good afternoon, and welcome to Lupin Limited Q4FY24 Earnings Conference \nCall",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_usd_million": "815",
+    "sales_inr_crores": "4895",
+    "growth_percentage": "65",
+    "ebitda_margin_percentage": "65",
+    "ebitda_inr_crores": "997"
+  },
+  "business_highlights": [
+    "launched 28 products in FY24 and plan to launch about 20 products in \nFY25.",
+    "launched also in other countries like Russia the product was launched."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:58.779531",
+    "source_file": "data\\lupin\\LUPIN_transcript_May_2024.pdf",
+    "text_length": 59451,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

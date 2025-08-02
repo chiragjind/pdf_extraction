@@ -1,0 +1,26 @@
+{
+  "company": "CIPLA",
+  "report_date": "August 15, 2023",
+  "filename": "CIPLA_transcript_Aug_2023.pdf",
+  "quarter": "Q10",
+  "fiscal_year": "2023",
+  "management_team": [
+    "Management information not found"
+  ],
+  "moderator": "Dear shareholders, good afternoon and a warm welcome to the 87th Annual \nGeneral Meeting of Cipla Limited",
+  "analysts": [],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "ebitda_margin_percentage": "23"
+  },
+  "business_highlights": [
+    "launched new products 81, 93 and 78 year-on-year, but why 15 products \nshort in ’22- '23, what is the reason.",
+    "partnership with Novartis for Scapho, which is a \npsoriasis product."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:51.241758",
+    "source_file": "data\\cipla\\CIPLA_transcript_Aug_2023.pdf",
+    "text_length": 98930,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

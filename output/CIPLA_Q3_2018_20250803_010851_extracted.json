@@ -1,0 +1,87 @@
+{
+  "company": "CIPLA",
+  "report_date": "February 7, 2018",
+  "filename": "CIPLA_transcript_Feb_2018.pdf",
+  "quarter": "Q3",
+  "fiscal_year": "2018",
+  "management_team": [
+    "MR. UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "MR. KEDAR UPADHYE - GLOBAL CFO, CIPLA",
+    "MR. NAVEEN BANSAL - INVESTOR RELATIONS TEAM,",
+    "UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "KEDAR UPADHYE - GLOBAL CFO, CIPLA",
+    "NAVEEN BANSAL - INVESTOR RELATIONS TEAM,"
+  ],
+  "moderator": "MR",
+  "analysts": [
+    {
+      "name": "Manoj Garg",
+      "firm": "Health Co"
+    },
+    {
+      "name": "Kartik Mehta",
+      "firm": "Deutsche Bank"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Anubhav Agarwal",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Prakash Agarwal",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Pratika Jalan",
+      "firm": "Narnolia Securities"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    },
+    {
+      "name": "Abhishek Sharma",
+      "firm": "IIFL"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "IDFC Securities"
+    },
+    {
+      "name": "Manushi Shah",
+      "firm": "Research Delta Advisors"
+    },
+    {
+      "name": "Mehul Sheth",
+      "firm": "Phillip Capital"
+    },
+    {
+      "name": "Saion Mukherjee",
+      "firm": "Nomura"
+    },
+    {
+      "name": "Charu Mehta",
+      "firm": "Dalal & Broacha"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "7",
+    "increase_percentage": "5.3"
+  },
+  "business_highlights": [
+    "launched 6 in-licensed products.",
+    "acquired intangible asset for the US generics market \ndue to the evolving pricing environment and delay in launching some of the products.",
+    "acquired, they were 30 ANDAs and seems \nlike we have written off value for almost 8-9 ANDAs.",
+    "acquired values already \ncharged of? \nKedar Upadhye: \nI think Prakash probably you referred to Invagen because GAVIS is not our acquisition."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:51.372144",
+    "source_file": "data\\cipla\\CIPLA_transcript_Feb_2018.pdf",
+    "text_length": 48934,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

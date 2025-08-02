@@ -1,0 +1,70 @@
+{
+  "company": "LUPIN",
+  "report_date": "August 9, 2018",
+  "filename": "LUPIN_transcript_Aug_2018.pdf",
+  "quarter": "Q1",
+  "fiscal_year": "2019",
+  "management_team": [
+    "DR. KAMAL SHARMA - VICE CHAIRMAN, LUPIN",
+    "MS. VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "MR. NILESH DESHBANDHU GUPTA - MANAGING",
+    "MR. RAMESH SWAMINATHAN - CHIEF FINANCIAL",
+    "MR. RAJEEV SIBAL - HEAD (INDIA REGION",
+    "MR. NARESH GUPTA - PRESIDENT",
+    "KAMAL SHARMA - VICE CHAIRMAN, LUPIN",
+    "VINITA GUPTA - CHIEF EXECUTIVE OFFICER,",
+    "DESHBANDHU GUPTA - MANAGING",
+    "RAMESH SWAMINATHAN - CHIEF FINANCIAL",
+    "RAJEEV SIBAL - HEAD (INDIA REGION",
+    "NARESH GUPTA - PRESIDENT"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to the Lupin Limited Q1 FY19 Earnings \nConference Call",
+  "analysts": [
+    {
+      "name": "Saion Mukherjee",
+      "firm": "Nomura Securities"
+    },
+    {
+      "name": "Neha M",
+      "firm": "JP Morgan"
+    },
+    {
+      "name": "Anubhav Agarwal",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Rakesh Jhunjhunwala",
+      "firm": "Rare \nEnterprises"
+    },
+    {
+      "name": "Anik Mitra",
+      "firm": "SMIFS"
+    },
+    {
+      "name": "Chirag Dagli",
+      "firm": "HDFC Asset \nManagement"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Ashi Anand",
+      "firm": "Allegro"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "ebitda_margin_percentage": "18"
+  },
+  "business_highlights": [
+    "launched the product, we had 50% coverage on commercial \nplants, at this point it is at 68% and our target is to be at (+80%) by the end of this year.",
+    "partnership with Boehringer, can you just shed \nsome light on that? \nRajeev Sibal: \nIndia business, as we have mentioned earlier also that we will grow at 14% to 15% level for the \nyear and we are pretty much there as far as that particular growth is concerned."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:55.901844",
+    "source_file": "data\\lupin\\LUPIN_transcript_Aug_2018.pdf",
+    "text_length": 48404,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

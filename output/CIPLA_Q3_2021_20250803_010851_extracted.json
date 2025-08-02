@@ -1,0 +1,90 @@
+{
+  "company": "CIPLA",
+  "report_date": "January 29, 2021",
+  "filename": "CIPLA_transcript_Feb_2021.pdf",
+  "quarter": "Q3",
+  "fiscal_year": "2021",
+  "management_team": [
+    "MR. UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "MR. KEDAR UPADHYE - GLOBAL CFO, CIPLA",
+    "MR. NAVEEN BANSAL - INVESTOR RELATIONS TEAM,",
+    "UMANG VOHRA - MD & GLOBAL CEO, CIPLA",
+    "KEDAR UPADHYE - GLOBAL CFO, CIPLA",
+    "NAVEEN BANSAL - INVESTOR RELATIONS TEAM,"
+  ],
+  "moderator": "Ladies and gentlemen, good day and welcome to the Cipla Q3 FY21 Earnings call hosted by \nKotak Securities Limited",
+  "analysts": [
+    {
+      "name": "Tushar Manudhane",
+      "firm": "Motilal \nOswal Financial Services"
+    },
+    {
+      "name": "Kunal",
+      "firm": "Emkay Global"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "J"
+    },
+    {
+      "name": "Nithya Balasubramanian",
+      "firm": "Bernstein"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "DAM Capital"
+    },
+    {
+      "name": "Girish Bakhru",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Ashish Thavkar",
+      "firm": "Motilal Oswal Asset \nManagement"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    },
+    {
+      "name": "Vishal Manchanda",
+      "firm": "Nirmal Bang \nInstitutional Equities"
+    },
+    {
+      "name": "Sayantan Maji",
+      "firm": "Credit Suisse"
+    },
+    {
+      "name": "Prakash Agarwal",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Charulata Gaidhani",
+      "firm": "Dalal & Broacha"
+    },
+    {
+      "name": "Sameer Shah",
+      "firm": "ValueQuest"
+    },
+    {
+      "name": "Rithesh Rathod",
+      "firm": "Nippon India"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "growth_percentage": "18",
+    "increase_percentage": "2.9",
+    "ebitda_margin_percentage": "24.8",
+    "ebitda_inr_crores": "1281"
+  },
+  "business_highlights": [
+    "partnership with Alvogen for four oncology \nproducts, which will enhance our oncology presence over the long term."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:51.859456",
+    "source_file": "data\\cipla\\CIPLA_transcript_Feb_2021.pdf",
+    "text_length": 53405,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}

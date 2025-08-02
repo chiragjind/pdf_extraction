@@ -1,0 +1,93 @@
+{
+  "company": "CIPLA",
+  "report_date": "January 25, 2023",
+  "filename": "CIPLA_transcript_Jan_2023.pdf",
+  "quarter": "Q3",
+  "fiscal_year": "2023",
+  "management_team": [
+    "MR. ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "MR. UMANG VOHRA - MANAGING DIRECTOR AND",
+    "MR. NAVEEN BANSAL - INVESTOR RELATIONS",
+    "MR. ANKIT BHEMBRE - INVESTOR RELATIONS",
+    "ASHISH ADUKIA - GLOBAL CHIEF FINANCIAL",
+    "UMANG VOHRA - MANAGING DIRECTOR AND",
+    "EXECUTIVE OFFICER - CIPLA LIMITED",
+    "NAVEEN BANSAL - INVESTOR RELATIONS",
+    "ANKIT BHEMBRE - INVESTOR RELATIONS"
+  ],
+  "moderator": "Ladies and gentlemen, good day, and welcome to Cipla Limited Q3 FY '23 Earnings Conference \nCall",
+  "analysts": [
+    {
+      "name": "Saion Mukherjee",
+      "firm": "Nomura Securities"
+    },
+    {
+      "name": "Kunal Dhamesha",
+      "firm": "Macquarie Group"
+    },
+    {
+      "name": "Krishnendu Saha",
+      "firm": "Quantum AMC"
+    },
+    {
+      "name": "Prakash Agarwal",
+      "firm": "Axis Capital"
+    },
+    {
+      "name": "Shubham Goyal",
+      "firm": "Motilal Oswal"
+    },
+    {
+      "name": "Sriraam Rathi",
+      "firm": "BNP Paribas"
+    },
+    {
+      "name": "Damayanti Kerai",
+      "firm": "HSBC Securities"
+    },
+    {
+      "name": "Surya Patra",
+      "firm": "PhillipCapital"
+    },
+    {
+      "name": "Parvathi",
+      "firm": "Course5i"
+    },
+    {
+      "name": "Neha Manpuria",
+      "firm": "Bank of America"
+    },
+    {
+      "name": "Bino Pathiparampil",
+      "firm": "InCred Capital"
+    },
+    {
+      "name": "Sameer Baisiwala",
+      "firm": "Morgan Stanley"
+    },
+    {
+      "name": "Nikhil Mathur",
+      "firm": "HDFC Mutual Fund"
+    },
+    {
+      "name": "Nitin Agarwal",
+      "firm": "DAM Capital"
+    }
+  ],
+  "qa_segments": [],
+  "key_financial_metrics": {
+    "revenue_inr_crores": "5810",
+    "sales_inr_crores": "1450",
+    "growth_percentage": "6",
+    "increase_percentage": "3.2"
+  },
+  "business_highlights": [
+    "launched over 10 products, and \ntherefore, the launch momentum continued in key therapies such as cardiac, antidiabetic and \ninjectable dosage forms."
+  ],
+  "extraction_metadata": {
+    "extraction_date": "2025-08-03T01:08:52.595029",
+    "source_file": "data\\cipla\\CIPLA_transcript_Jan_2023.pdf",
+    "text_length": 53624,
+    "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
+  }
+}
