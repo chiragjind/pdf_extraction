@@ -11,8 +11,21 @@ class EarningsCallExtractor:
             'cipla': r'CIPLA|Cipla Limited'
         }
         
+        # Enhanced management names for better identification
+        self.management_names = {
+            'cipla': [
+                'Umang Vohra', 'Kedar Upadhye', 'Samina Vaziralli', 'Rajesh Pradhan',
+                'Ashish Adukia', 'Nikhil Chopra', 'Jaideep Gogtay'
+            ],
+            'lupin': [
+                'Nilesh Gupta', 'Ramesh Swaminathan', 'Vinita Gupta', 'Rajeev Sibal',
+                'Fabrice Egros', 'Cyrus Karkaria', 'Dr. Kamal Sharma', 'Kamal Sharma',
+                'Sunil Makharia', 'Naresh Gupta', 'Rajiv Pillai', 'Arvind Bothra'
+            ]
+        }
+        
     def extract_from_pdf(self, pdf_path):
-        """Main extraction function"""
+        """Main extraction function with intelligent format detection"""
         print(f"🔄 Processing: {Path(pdf_path).name}")
         
         # Extract raw text
@@ -20,32 +33,250 @@ class EarningsCallExtractor:
         
         # Get filename for pattern matching
         filename = Path(pdf_path).name
+        company = self._extract_company_name(raw_text, filename)
         
-        # Extract structured data
-        data = {
-            "company": self._extract_company_name(raw_text, filename),
-            "report_date": self._extract_report_date(raw_text, filename),
-            "filename": filename,
-            "quarter": self._extract_quarter_info(raw_text, filename),
-            "fiscal_year": self._extract_fiscal_year(raw_text, filename),
-            "management_team": self._extract_management_team(raw_text),
-            "moderator": self._extract_moderator(raw_text),
-            "analysts": self._extract_analysts(raw_text),
-            "qa_segments": self._extract_qa_segments(raw_text),
-            "key_financial_metrics": self._extract_financial_metrics(raw_text),
-            "business_highlights": self._extract_business_highlights(raw_text),
-            "extraction_metadata": {
-                "extraction_date": datetime.now().isoformat(),
-                "source_file": pdf_path,
-                "text_length": len(raw_text),
-                "extraction_method": "PyMuPDF + Regex parsing + Filename analysis"
-            }
-        }
+        # Detect PDF format type
+        pdf_format = self._detect_pdf_format(raw_text, company)
+        print(f"  🔍 Detected format: {pdf_format}")
+        
+        # Extract structured data based on format
+        if pdf_format == "structured_transcript":
+            data = self._extract_structured_format(raw_text, filename, company)
+        else:
+            data = self._extract_general_format(raw_text, filename, company)
         
         # Print extraction summary
         print(f"  📊 Extracted: {data['company']} {data['quarter']} FY{data['fiscal_year']}")
         
         return data
+    
+    def _detect_pdf_format(self, text, company):
+        """Detect if this is a structured transcript or general format"""
+        # Look for structured transcript indicators
+        structured_indicators = [
+            r'MANAGEMENT:\s*DR\.|MR\.|MS\.',  # Lupin format
+            r'Conference Call.*?\d{4}',
+            r'Moderator:.*Ladies and gentlemen',
+            r'good day and welcome',
+            r'Page \d+ of \d+'
+        ]
+        
+        for pattern in structured_indicators:
+            if re.search(pattern, text, re.IGNORECASE):
+                return "structured_transcript"
+        
+        return "general_format"
+    
+    def _extract_structured_format(self, text, filename, company):
+        """Extract from structured earnings call transcripts (like Lupin)"""
+        return {
+            "company": company,
+            "report_date": self._extract_report_date(text, filename),
+            "filename": filename,
+            "quarter": self._extract_quarter_info(text, filename),
+            "fiscal_year": self._extract_fiscal_year(text, filename),
+            "management_team": self._extract_management_structured(text, company),
+            "moderator": self._extract_moderator_structured(text),
+            "analysts": self._extract_analysts_structured(text),
+            "qa_segments": self._extract_qa_structured(text, company),
+            "key_financial_metrics": self._extract_financial_metrics(text),
+            "business_highlights": self._extract_business_highlights(text),
+            "extraction_metadata": {
+                "extraction_date": datetime.now().isoformat(),
+                "source_file": filename,
+                "text_length": len(text),
+                "extraction_method": "Structured Transcript Parser",
+                "format_detected": "structured_transcript"
+            }
+        }
+    
+    def _extract_general_format(self, text, filename, company):
+        """Extract from general format documents (like Cipla)"""
+        return {
+            "company": company,
+            "report_date": self._extract_report_date(text, filename),
+            "filename": filename,
+            "quarter": self._extract_quarter_info(text, filename),
+            "fiscal_year": self._extract_fiscal_year(text, filename),
+            "management_team": self._extract_management_team(text, company),
+            "moderator": self._extract_moderator(text),
+            "analysts": self._extract_analysts(text),
+            "qa_segments": self._extract_qa_segments_improved(text, company),
+            "key_financial_metrics": self._extract_financial_metrics(text),
+            "business_highlights": self._extract_business_highlights(text),
+            "extraction_metadata": {
+                "extraction_date": datetime.now().isoformat(),
+                "source_file": filename,
+                "text_length": len(text),
+                "extraction_method": "General Format Parser",
+                "format_detected": "general_format"
+            }
+        }
+    
+    def _extract_management_structured(self, text, company):
+        """Extract management team from structured format"""
+        management = []
+        
+        # Look for MANAGEMENT section with specific format
+        mgmt_section_pattern = r'MANAGEMENT:\s*(.*?)(?=Page|\n\s*\n|\Z)'
+        mgmt_match = re.search(mgmt_section_pattern, text, re.DOTALL | re.IGNORECASE)
+        
+        if mgmt_match:
+            mgmt_text = mgmt_match.group(1)
+            
+            # Extract individual management members
+            member_patterns = [
+                r'(DR\.|MR\.|MS\.)\s+([A-Z\s]+?)\s*[–-]\s*([^–\n]+)',
+                r'([A-Z][A-Z\s]+?)\s*[–-]\s*([^–\n]+)',
+            ]
+            
+            for pattern in member_patterns:
+                matches = re.findall(pattern, mgmt_text)
+                for match in matches:
+                    if len(match) == 3:
+                        title, name, position = match
+                        management.append(f"{title.strip()} {name.strip()} - {position.strip()}")
+                    elif len(match) == 2:
+                        name, position = match
+                        management.append(f"{name.strip()} - {position.strip()}")
+        
+        # Clean up management names
+        cleaned_management = []
+        for member in management:
+            # Remove extra spaces and clean up
+            cleaned = re.sub(r'\s+', ' ', member).strip()
+            if len(cleaned) > 5 and cleaned not in cleaned_management:
+                cleaned_management.append(cleaned)
+        
+        return cleaned_management if cleaned_management else ["Management information not found"]
+    
+    def _extract_moderator_structured(self, text):
+        """Extract moderator from structured format"""
+        moderator_patterns = [
+            r'Moderator:\s*([^.\n]+)',
+            r'moderator.*?([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)',
+        ]
+        
+        for pattern in moderator_patterns:
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                return match.group(1).strip()
+        
+        return "Moderator information not found"
+    
+    def _extract_analysts_structured(self, text):
+        """Extract analysts from structured Q&A format"""
+        analysts = []
+        seen_analysts = set()
+        
+        # Multiple patterns for analyst identification
+        analyst_patterns = [
+            r'([A-Z][a-z]+\s+[A-Z][a-z]+)\s+from\s+([A-Z][a-zA-Z\s&\.]+)\.?\s*Please go ahead',
+            r'([A-Z][a-z]+\s+[A-Z][a-z]+)\s+from\s+([A-Z][a-zA-Z\s&\.]+)',
+            r'question.*?from.*?line of\s+([A-Z][a-z]+\s+[A-Z][a-z]+)\s+from\s+([^.]+)',
+            r'The.*?question.*?is from\s+([A-Z][a-z]+\s+[A-Z][a-z]+)\s+from\s+([^.]+)',
+        ]
+        
+        for pattern in analyst_patterns:
+            matches = re.findall(pattern, text, re.IGNORECASE)
+            for match in matches:
+                analyst_name = match[0].strip()
+                firm = match[1].strip()
+                
+                # Clean firm name
+                firm = re.sub(r'\s+', ' ', firm.replace('\n', ' '))
+                firm = re.sub(r'\.?\s*Please go ahead.*$', '', firm)
+                
+                if analyst_name not in seen_analysts and len(analyst_name) > 3:
+                    analysts.append({
+                        "name": analyst_name,
+                        "firm": firm
+                    })
+                    seen_analysts.add(analyst_name)
+        
+        return analysts
+    
+    def _extract_qa_structured(self, text, company):
+        """Extract Q&A from structured format"""
+        qa_segments = []
+        mgmt_names = self.management_names.get(company.lower(), [])
+        
+        # Find all Q&A exchanges
+        # Split by analyst questions
+        analyst_intro_pattern = r'(?:The.*?question.*?is from|Thank you.*?We will take.*?question from.*?line of)\s+([A-Z][a-z]+\s+[A-Z][a-z]+)\s+from\s+([^.]+)\.?\s*Please go ahead\.'
+        
+        # Split text into segments
+        segments = re.split(analyst_intro_pattern, text, flags=re.IGNORECASE)
+        
+        # Process segments in groups of 3 (text, analyst_name, firm)
+        for i in range(1, len(segments), 3):
+            if i + 2 >= len(segments):
+                break
+            
+            analyst_name = segments[i].strip()
+            analyst_firm = segments[i + 1].strip().replace('\n', ' ')
+            segment_content = segments[i + 2]
+            
+            # Parse the Q&A content from this segment
+            qa_pair = self._parse_structured_qa_content(segment_content, mgmt_names, analyst_name)
+            
+            if qa_pair['question'] or qa_pair['answers']:
+                qa_segments.append({
+                    "analyst_name": analyst_name,
+                    "analyst_firm": analyst_firm,
+                    "question": qa_pair['question'],
+                    "answers": qa_pair['answers']
+                })
+        
+        return qa_segments
+    
+    def _parse_structured_qa_content(self, content, mgmt_names, analyst_name):
+        """Parse structured Q&A content"""
+        qa_pair = {
+            "question": "",
+            "answers": []
+        }
+        
+        # Split by speaker names (Name:)
+        speaker_pattern = r'([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*):\s*'
+        parts = re.split(speaker_pattern, content)
+        
+        current_speaker = None
+        
+        for i, part in enumerate(parts):
+            part = part.strip()
+            if not part:
+                continue
+            
+            # Check if this is a speaker name
+            if re.match(r'^[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*$', part) and i + 1 < len(parts):
+                current_speaker = part
+            elif current_speaker and i > 0:
+                content_text = part[:1500]  # Limit length
+                
+                # Determine speaker type
+                is_management = any(name.split()[-1] in current_speaker for name in mgmt_names)
+                is_analyst = current_speaker == analyst_name or 'analyst' in current_speaker.lower()
+                
+                if not qa_pair['question'] and (is_analyst or current_speaker == analyst_name):
+                    # This is the analyst question
+                    qa_pair['question'] = content_text
+                elif is_management:
+                    # This is a management response
+                    qa_pair['answers'].append({
+                        "speaker": current_speaker,
+                        "response": content_text,
+                        "speaker_type": "Management"
+                    })
+                elif qa_pair['question'] and current_speaker == analyst_name:
+                    # Follow-up question from analyst
+                    qa_pair['answers'].append({
+                        "speaker": current_speaker,
+                        "response": content_text,
+                        "speaker_type": "Analyst Follow-up"
+                    })
+        
+        return qa_pair
     
     def _extract_text_from_pdf(self, pdf_path):
         """Extract raw text from PDF"""
@@ -88,7 +319,8 @@ class EarningsCallExtractor:
         date_patterns = [
             r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+\d{4}',
             r'\d{1,2}[/-]\d{1,2}[/-]\d{4}',
-            r'\d{4}[/-]\d{1,2}[/-]\d{1,2}'
+            r'\d{4}[/-]\d{1,2}[/-]\d{1,2}',
+            r'August \d{2}, \d{4}'  # Specific for the Lupin format
         ]
         
         for pattern in date_patterns:
@@ -101,7 +333,6 @@ class EarningsCallExtractor:
     
     def _extract_date_from_filename(self, filename):
         """Extract or construct date from filename"""
-        # Patterns like "Aug_2018", "August_2018"
         month_year_patterns = [
             r'(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|september|oct|october|nov|november|dec|december)_(\d{4})',
             r'(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|september|oct|october|nov|november|dec|december)(\d{4})'
@@ -131,7 +362,6 @@ class EarningsCallExtractor:
                 year = match.group(2)
                 month_full = month_names.get(month_abbr, month_abbr.title())
                 
-                # Default to mid-month for earnings calls
                 constructed_date = f"{month_full} 15, {year}"
                 print(f"  📅 Constructed date from filename: {constructed_date}")
                 return constructed_date
@@ -169,24 +399,8 @@ class EarningsCallExtractor:
             'jan': 'Q4', 'january': 'Q4', 'feb': 'Q4', 'february': 'Q4', 'mar': 'Q4', 'march': 'Q4'
         }
         
-        # Extract month from filename patterns like "Aug_2018", "August_2018", etc.
-        month_patterns = [
-            r'_(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|september|oct|october|nov|november|dec|december)_',
-            r'_(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|september|oct|october|nov|november|dec|december)\d{4}',
-            r'(jan|january|feb|february|mar|march|apr|april|may|jun|june|jul|july|aug|august|sep|september|oct|october|nov|november|dec|december)_\d{4}'
-        ]
-        
         filename_lower = filename.lower()
         
-        for pattern in month_patterns:
-            match = re.search(pattern, filename_lower)
-            if match:
-                month = match.group(1)
-                quarter = month_to_quarter.get(month, 'Unknown Quarter')
-                print(f"  📅 Detected month '{month}' from filename → {quarter}")
-                return quarter
-        
-        # Try to find month anywhere in filename
         for month, quarter in month_to_quarter.items():
             if month in filename_lower:
                 print(f"  📅 Found month '{month}' in filename → {quarter}")
@@ -234,7 +448,6 @@ class EarningsCallExtractor:
                 calendar_year = int(year)
                 
                 # Indian fiscal year logic: April to March
-                # Q1 FY19 = Apr-Jun 2018, Q2 FY19 = Jul-Sep 2018, etc.
                 if month in ['jan', 'january', 'feb', 'february', 'mar', 'march']:
                     fiscal_year = calendar_year  # Jan-Mar belongs to same FY
                 else:
@@ -247,47 +460,34 @@ class EarningsCallExtractor:
         
         return "Unknown Year"
     
-    def _extract_management_team(self, text):
-        """Extract management team members"""
+    # Keep all the existing methods for general format
+    def _extract_management_team(self, text, company):
+        """Extract management team members (general format)"""
         management = []
         
-        # Pattern for management section
-        mgmt_patterns = [
-            r'MANAGEMENT:\s*(.*?)(?=MODERATOR:|Moderator:|\n\n)',
-            r'From.*?management.*?we have.*?(.*?)(?=\n\n|Moderator)',
-        ]
+        # Get known management names for the company
+        known_names = self.management_names.get(company.lower(), [])
         
-        for pattern in mgmt_patterns:
-            match = re.search(pattern, text, re.DOTALL | re.IGNORECASE)
-            if match:
-                mgmt_text = match.group(1)
-                
-                # Extract individual members
-                member_patterns = [
-                    r'(MR\.|MS\.|DR\.)\s+([A-Z\s]+?)\s*[–-]\s*([^–\n]+)',
-                    r'([A-Z]+\s+[A-Z]+)\s*[–-]\s*([^–\n]+)',
-                ]
-                
-                for member_pattern in member_patterns:
-                    matches = re.findall(member_pattern, mgmt_text)
-                    for match in matches:
-                        if len(match) == 3:  # Title, Name, Position
-                            title, name, position = match
-                            member_info = f"{title.strip()} {name.strip()} - {position.strip()}"
-                        else:  # Name, Position
-                            name, position = match
-                            member_info = f"{name.strip()} - {position.strip()}"
-                        
-                        if member_info not in management:
-                            management.append(member_info)
+        # Look for known management names in text
+        for name in known_names:
+            if name in text:
+                # Try to find their designation
+                name_pattern = rf'{re.escape(name)}\s*[–-]\s*([^–\n]+)'
+                match = re.search(name_pattern, text)
+                if match:
+                    position = match.group(1).strip()
+                    management.append(f"{name} - {position}")
+                else:
+                    management.append(f"{name} - Position not specified")
         
         return management if management else ["Management information not found"]
     
     def _extract_moderator(self, text):
-        """Extract moderator information"""
+        """Extract moderator information (general format)"""
         moderator_patterns = [
             r'MODERATOR:\s*([^\.]+)',
             r'Moderator:\s*([^\n]+)',
+            r'moderator.*?([A-Z][a-z]+\s+[A-Z][a-z]+)',
         ]
         
         for pattern in moderator_patterns:
@@ -298,140 +498,80 @@ class EarningsCallExtractor:
         return "Moderator information not found"
     
     def _extract_analysts(self, text):
-        """Extract analyst information from Q&A section"""
+        """Extract analyst information (general format)"""
         analysts = []
         
-        # Pattern for analyst introductions
-        analyst_pattern = r'(?:question|Next question).*?from.*?line of ([^.]+) (?:from|with) ([^.]+)\.'
-        
-        matches = re.findall(analyst_pattern, text, re.IGNORECASE)
+        # Multiple patterns for analyst introductions
+        analyst_patterns = [
+            r'([A-Z][a-z]+\s+[A-Z][a-z]+)\s+from\s+([A-Z][a-zA-Z\s&]+)',
+            r'([A-Z][a-z]+\s+[A-Z][a-z]+)\s*[–-]\s*([A-Z][a-zA-Z\s&]+)',
+        ]
         
         seen_analysts = set()
-        for analyst_name, firm in matches:
-            analyst_name = analyst_name.strip()
-            firm = firm.strip()
+        
+        for pattern in analyst_patterns:
+            matches = re.findall(pattern, text, re.IGNORECASE)
             
-            if analyst_name not in seen_analysts:
-                analysts.append({
-                    "name": analyst_name,
-                    "firm": firm
-                })
-                seen_analysts.add(analyst_name)
+            for match in matches:
+                analyst_name = match[0].strip()
+                firm = match[1].strip()
+                
+                if analyst_name not in seen_analysts and len(analyst_name) > 3:
+                    analysts.append({
+                        "name": analyst_name,
+                        "firm": firm
+                    })
+                    seen_analysts.add(analyst_name)
         
         return analysts
     
-    def _extract_qa_segments(self, text):
-        """Extract Q&A segments"""
+    def _extract_qa_segments_improved(self, text, company):
+        """General Q&A extraction"""
         qa_segments = []
+        mgmt_names = self.management_names.get(company.lower(), [])
         
-        # Find Q&A section
-        qa_start_patterns = [
-            r'question.*?answer.*?session',
-            r'open.*?floor.*?discussion',
-            r'first question'
+        # Simple fallback for general format
+        question_patterns = [
+            r'([^.]*\?[^?]*?)([A-Z][a-z]+\s+[A-Z][a-z]+):\s*([^?]+)',
         ]
         
-        qa_start = -1
-        for pattern in qa_start_patterns:
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                qa_start = match.start()
-                break
-        
-        if qa_start == -1:
-            return qa_segments
-        
-        qa_text = text[qa_start:]
-        
-        # Split by question introductions
-        question_splits = re.split(
-            r'(?:Next question|The question|question).*?comes from.*?line of ([^.]+) (?:from|with) ([^.]+)\.',
-            qa_text,
-            flags=re.IGNORECASE
-        )
-        
-        for i in range(1, len(question_splits), 3):
-            if i + 2 >= len(question_splits):
-                break
-                
-            analyst = question_splits[i].strip()
-            firm = question_splits[i + 1].strip()
-            qa_content = question_splits[i + 2].strip()
+        for pattern in question_patterns:
+            matches = re.findall(pattern, text, re.DOTALL)
             
-            # Parse questions and answers from the content
-            qa_pair = self._parse_qa_content(qa_content)
-            
-            if qa_pair['question']:
-                qa_segments.append({
-                    "analyst_name": analyst,
-                    "analyst_firm": firm,
-                    "question": qa_pair['question'],
-                    "answers": qa_pair['answers']
-                })
-        
-        return qa_segments
-    
-    def _parse_qa_content(self, content):
-        """Parse question and answer from content"""
-        qa_pair = {
-            "question": "",
-            "answers": []
-        }
-        
-        # Split by speaker names
-        speaker_pattern = r'([A-Za-z\s]+):'
-        parts = re.split(speaker_pattern, content)
-        
-        current_speaker = None
-        for i, part in enumerate(parts):
-            part = part.strip()
-            if not part:
-                continue
-            
-            # Check if this is a speaker name
-            if re.match(r'^[A-Za-z\s]+$', part) and i + 1 < len(parts):
-                current_speaker = part
-            elif current_speaker:
-                # This is content from the current speaker
-                if not qa_pair['question'] and any(name in current_speaker.lower() for name in ['analyst', 'question']):
-                    qa_pair['question'] = part[:500]  # Limit length
-                elif current_speaker in ['Umang Vohra', 'Kedar Upadhye', 'Vinita Gupta', 'Ramesh Swaminathan', 'Nilesh Gupta']:
-                    qa_pair['answers'].append({
-                        "speaker": current_speaker,
-                        "response": part[:500]  # Limit length
+            for match in matches:
+                if len(match) == 3:
+                    question, speaker, answer = match
+                    qa_segments.append({
+                        "analyst_name": "Unknown Analyst",
+                        "analyst_firm": "Unknown Firm",
+                        "question": question.strip()[:500],
+                        "answers": [{
+                            "speaker": speaker.strip(),
+                            "response": answer.strip()[:500],
+                            "speaker_type": "Management" if any(name in speaker for name in mgmt_names) else "Unknown"
+                        }]
                     })
         
-        return qa_pair
+        return qa_segments[:10]
     
     def _extract_financial_metrics(self, text):
         """Extract financial metrics"""
         metrics = {}
         
-        # Revenue patterns
-        revenue_patterns = [
+        # Enhanced patterns for better extraction
+        patterns = [
             (r'revenue.*?(?:of|at|was)\s*(?:INR|Rs\.?)\s*([0-9,]+)\s*crores?', 'revenue_inr_crores'),
             (r'revenue.*?(?:of|at|was)\s*\$\s*([0-9,]+)\s*million', 'revenue_usd_million'),
             (r'sales.*?(?:of|at|was)\s*(?:INR|Rs\.?)\s*([0-9,]+)\s*crores?', 'sales_inr_crores'),
-        ]
-        
-        # Growth patterns
-        growth_patterns = [
             (r'growth.*?(?:of|at|was)\s*([0-9]+\.?[0-9]*)\s*%', 'growth_percentage'),
-            (r'increased.*?(?:by|to)\s*([0-9]+\.?[0-9]*)\s*%', 'increase_percentage'),
-        ]
-        
-        # EBITDA patterns
-        ebitda_patterns = [
             (r'EBITDA.*?(?:of|at|was)\s*([0-9]+\.?[0-9]*)\s*%', 'ebitda_margin_percentage'),
             (r'EBITDA.*?(?:of|at|was)\s*(?:INR|Rs\.?)\s*([0-9,]+)\s*crores?', 'ebitda_inr_crores'),
+            (r'US\$([0-9,]+)\s*million', 'us_sales_usd_million'),
         ]
         
-        all_patterns = revenue_patterns + growth_patterns + ebitda_patterns
-        
-        for pattern, metric_name in all_patterns:
+        for pattern, metric_name in patterns:
             matches = re.findall(pattern, text, re.IGNORECASE)
             if matches:
-                # Take the first match and clean it
                 value = matches[0].replace(',', '')
                 metrics[metric_name] = value
         
@@ -441,27 +581,37 @@ class EarningsCallExtractor:
         """Extract business highlights and key points"""
         highlights = []
         
-        # Look for key business terms and context
+        # Enhanced patterns for business highlights
         highlight_patterns = [
             r'(launched.*?(?:product|brand|initiative)[^.]*\.)',
             r'(approved.*?(?:by|from).*?(?:FDA|authority)[^.]*\.)',
             r'(partnership.*?with.*?[^.]*\.)',
             r'(acquired.*?[^.]*\.)',
             r'(expanded.*?(?:presence|operations)[^.]*\.)',
+            r'(received.*?approval.*?[^.]*\.)',
+            r'(filed.*?(?:ANDA|application)[^.]*\.)',
+            r'(commenced.*?(?:supply|production)[^.]*\.)',
+            r'(expecting.*?launch.*?[^.]*\.)',
+            r'(ramp.*?up.*?[^.]*\.)',
         ]
         
         for pattern in highlight_patterns:
             matches = re.findall(pattern, text, re.IGNORECASE)
             for match in matches:
-                if len(match) > 20:  # Filter out very short matches
-                    highlights.append(match.strip())
+                if len(match) > 20:
+                    clean_highlight = re.sub(r'\s+', ' ', match.strip())
+                    if clean_highlight not in highlights:
+                        highlights.append(clean_highlight)
         
-        # Limit to top 10 highlights
-        return highlights[:10]
+        return highlights[:15]
     
     def save_to_json(self, data, output_path):
         """Save extracted data to JSON file"""
         try:
+            # Ensure output directory exists
+            output_dir = Path(output_path).parent
+            output_dir.mkdir(parents=True, exist_ok=True)
+            
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(data, f, indent=2, ensure_ascii=False)
             print(f"✅ Data saved to: {output_path}")
@@ -474,8 +624,8 @@ class EarningsCallExtractor:
 def main():
     extractor = EarningsCallExtractor()
     
-    # Test with sample PDF (you'll replace this with your actual PDF path)
-    pdf_path = "data/sample.pdf"  # Replace with your PDF path
+    # Test with sample PDF
+    pdf_path = "data/sample.pdf"
     
     if Path(pdf_path).exists():
         data = extractor.extract_from_pdf(pdf_path)

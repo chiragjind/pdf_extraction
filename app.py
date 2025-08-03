@@ -44,7 +44,10 @@ def setup_directories():
         'data/cipla', 
         'data/lupin', 
         'data/others',
-        'output', 
+        'output',
+        'output/cipla',    # NEW: Separate folder for Cipla JSONs
+        'output/lupin',    # NEW: Separate folder for Lupin JSONs  
+        'output/others',   # NEW: Separate folder for other company JSONs
         'logs'
     ]
     
@@ -99,6 +102,21 @@ def print_file_summary(pdf_files):
     
     return total_files
 
+def get_output_path_for_company(company, data):
+    """Get the correct output folder path for each company"""
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    output_filename = f"{data['company']}_{data['quarter']}_{data['fiscal_year']}_{timestamp}_extracted.json"
+    
+    # Direct to company-specific folder
+    if company.lower() == 'cipla':
+        output_path = Path('output') / 'cipla' / output_filename
+    elif company.lower() == 'lupin':
+        output_path = Path('output') / 'lupin' / output_filename
+    else:
+        output_path = Path('output') / 'others' / output_filename
+    
+    return output_path, output_filename
+
 def process_company_pdfs(company, pdf_files, extractor, logger):
     """Process all PDFs for a specific company"""
     if not pdf_files:
@@ -122,10 +140,8 @@ def process_company_pdfs(company, pdf_files, extractor, logger):
             if data['company'] == 'UNKNOWN':
                 data['company'] = company.upper()
             
-            # Create output filename with timestamp to avoid conflicts
-            timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            output_filename = f"{data['company']}_{data['quarter']}_{data['fiscal_year']}_{timestamp}_extracted.json"
-            output_path = Path('output') / output_filename
+            # Get company-specific output path
+            output_path, output_filename = get_output_path_for_company(company, data)
             
             # Save data
             if extractor.save_to_json(data, str(output_path)):
@@ -136,7 +152,7 @@ def process_company_pdfs(company, pdf_files, extractor, logger):
                 print(f"   📊 {data['quarter']} {data['fiscal_year']} | Date: {data['report_date']}")
                 print(f"   👥 Management: {len(data['management_team'])} | Analysts: {len(data['analysts'])}")
                 print(f"   💬 Q&A: {len(data['qa_segments'])} | Metrics: {len(data['key_financial_metrics'])}")
-                print(f"   📄 → {output_filename}")
+                print(f"   📄 → output/{company.lower()}/{output_filename}")
                 
                 logger.info(f"Successfully processed {pdf_file.name}")
             else:
@@ -176,7 +192,8 @@ def generate_summary_report(all_results):
             summary["company_breakdown"][company] = {
                 "successful": successful,
                 "failed": failed,
-                "total": successful + failed
+                "total": successful + failed,
+                "output_folder": f"output/{company.lower()}/"
             }
     
     with open(summary_file, 'w', encoding='utf-8') as f:
@@ -242,12 +259,15 @@ def main():
     print(f"   ❌ Failed: {summary['extraction_summary']['failed_extractions']}")
     print(f"   📈 Success Rate: {summary['extraction_summary']['success_rate']}")
     
-    print(f"\n📁 All output files saved in: ./output/")
+    print(f"\n📁 Output files organized by company:")
+    print(f"   🏢 Cipla JSONs: ./output/cipla/")
+    print(f"   🏢 Lupin JSONs: ./output/lupin/")
+    print(f"   🏢 Others JSONs: ./output/others/")
     print(f"📝 Logs saved in: ./logs/")
     
     if summary['extraction_summary']['successful_extractions'] > 0:
         print(f"\n🎯 Next Steps:")
-        print(f"1. Review extracted JSON files in output/ folder")
+        print(f"1. Review extracted JSON files in company-specific output folders")
         print(f"2. Check logs for any processing details")
         print(f"3. Use JSON data for analysis or integration")
     
