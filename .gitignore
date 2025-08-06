@@ -23,8 +23,8 @@ wheels/
 *.egg
 
 # Virtual Environment
-data
-output
+data/
+output/
 pdf_env/
 venv/
 env/
