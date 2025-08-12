@@ -1,0 +1,63 @@
+{
+  "processing_date": "2025-08-10T20:54:39.401808",
+  "total_companies": 2,
+  "companies": [
+    {
+      "company": "CIPLA",
+      "total_documents": 7226,
+      "categories": {
+        "Financial Performance": 1151,
+        "Guidance & Outlook": 1028,
+        "Operational Updates": 560,
+        "Risks & Challenges": 249,
+        "Capital Allocation": 225,
+        "Innovation & R&D": 526,
+        "Healthcare Specific": 649,
+        "Market & Competition": 715,
+        "Regulatory & Compliance": 400,
+        "International Business": 273,
+        "General": 1450
+      },
+      "date_range": {
+        "earliest": "2018-02-01T00:00:00",
+        "latest": "2025-05-01T00:00:00"
+      },
+      "files_created": {
+        "complete_file": "rag_ready_results\\complete\\cipla_complete.json",
+        "embeddings_file": "rag_ready_results\\embeddings\\cipla_embeddings_ready.json",
+        "category_files": 11
+      }
+    },
+    {
+      "company": "LUPIN",
+      "total_documents": 6823,
+      "categories": {
+        "Financial Performance": 1009,
+        "Guidance & Outlook": 922,
+        "Operational Updates": 415,
+        "Risks & Challenges": 285,
+        "Capital Allocation": 175,
+        "Innovation & R&D": 609,
+        "Healthcare Specific": 528,
+        "Market & Competition": 573,
+        "Regulatory & Compliance": 380,
+        "International Business": 220,
+        "General": 1707
+      },
+      "date_range": {
+        "earliest": "2016-06-01T00:00:00",
+        "latest": "2025-05-01T00:00:00"
+      },
+      "files_created": {
+        "complete_file": "rag_ready_results\\complete\\lupin_complete.json",
+        "embeddings_file": "rag_ready_results\\embeddings\\lupin_embeddings_ready.json",
+        "category_files": 11
+      }
+    }
+  ],
+  "directory_structure": {
+    "complete/": "Complete company data files",
+    "by_category/": "Individual category files for each company",
+    "embeddings/": "Vector database ready format"
+  }
+}
