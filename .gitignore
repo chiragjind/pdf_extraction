@@ -23,6 +23,7 @@ wheels/
 *.egg
 
 # Virtual Environment
+rag_ready_results/
 data/
 output/
 pdf_env/
